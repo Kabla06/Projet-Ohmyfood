@@ -1,0 +1,80 @@
+%padding1 {
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+%padding2 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+%padding3 {
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+
+%shadow1 {
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.288);
+}
+
+%button {
+    padding: 12px;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(#FF79DA, #9356DC) ;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.288);
+}
+
+%cards {
+    width: 100%;
+    max-width: 300px;
+    padding: 18px;
+    padding-right: 45px;
+    padding-left: 15px;
+    color: black;
+    background: (rgb(243, 243, 243)) ;
+    border-radius: 17px;
+    border: none;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.288);
+}
+
+%numeros {
+    color: rgb(255, 255, 255);
+    border: 1px solid transparent;
+    font-size: small;
+    background-color: #9356DC;
+    margin-left: -25px;
+    border-radius: 20px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+%cards--restaurants {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.288);
+    background-color: #FFF;
+    text-decoration: none;
+    color: black;
+}
+
+%fahearthover {
+    background:-moz-linear-gradient(#ffa6e6, #9f6fda);
+    background: -webkit-linear-gradient(#ffa6e6, #9f6fda); 
+    background: linear-gradient(#ffa6e6, #9f6fda);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+%centerflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

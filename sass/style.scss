@@ -1,0 +1,230 @@
+@import './_variables';
+@import './_mixins';
+@import './_placeholders';
+
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    border: 1px solid $blacktransparent;
+    justify-content: center;
+    // @extend %padding1;
+    // @extend %shadow1;
+    @include padding1;
+    @include shadow1;
+    margin-bottom: 3px;
+
+    &__maintitle {
+        font-family: 'Shrikhand', sans-serif;
+        font-weight: 100;
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    // @extend %padding2;
+    @include padding2;
+    background: $grisclair;
+
+    .fa-map-marker {
+        color: $icogris;
+        padding-right: 20px;
+    }
+}
+
+.sectionhaut {
+    background-color: $gristresclair;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__button>p:nth-child(1) {
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 25px;
+    }
+
+    &__button>p:nth-child(2) {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    &__button--button {
+        text-align: center;
+        padding-bottom: 40px
+    }
+
+    &__button--button>button {
+        @include button;
+       
+        &:hover {
+            background: $gradientroseviolet;
+        }
+    }
+}
+
+.sectionfiltres {
+    &__titre {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        margin-left: -77px;
+        // transform: translate(40% 0 0 50%);
+    }
+}
+
+.filtres {
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 250px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.filtres__filtre, .filtres__filtre, .filtres__filtre {
+    display: flex;
+    flex-direction: row;
+    @include cards;
+    max-height: 57px;
+    text-overflow: ellipsis;
+    min-width: 100px;
+
+    &:hover {
+        background: $violetclair;
+    }
+
+    &--numero {
+        @include numeros;
+    }  
+}
+
+.filtres__filtre>i, .filtres__filtre>i, .filtres__filtre>i {
+    padding-left: 20px;
+    padding-right: 12px;
+    color: $icogris;
+}
+
+.filtres__filtre>p, .filtres__filtre>p, .filtres__filtre>p {
+    font-weight: bolder;
+    max-width: 173px;
+    min-width: 50px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.restaurants {
+    width: 100%;
+    margin-top: 60px;
+    background-color: $gristresclair;
+    padding-bottom: 60px;
+
+    &__cards--titre {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+}
+
+.restaurant__cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+
+.restaurant__container {
+    max-width: 300px;
+    width: 100%;
+    height: 230px;
+    @include cards--restaurants;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    &--img {
+        max-width: 100%;
+        max-height: 160px;
+        object-fit: cover;
+    }
+}
+
+.cards--restaurants--texte {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+    padding-left: 10px;
+}
+
+.cards--restaurants--icon {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    padding-right: 20px;
+
+    .fa-heart {
+        font-size: 25px;
+        color: $icogris;
+
+        &:hover {
+            @include fahearthover;
+        }
+    }
+}
+
+.liste {
+    background-color: $grisfooter;
+    padding-bottom: 30px;
+
+    .liste__ul {
+        margin-left: 20px;
+        padding-top: 15px;
+        list-style-type: none;
+
+        li {
+            padding: 3px;
+
+            i {
+                font-size: small;
+                padding-right: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+// ____________________________________________________ //
+
+// menu La Palette du Goût //
+

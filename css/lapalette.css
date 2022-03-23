@@ -1,0 +1,40 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 4px;
+}
+.header__maintitle {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 100;
+  font-size: 25px;
+}
+.header__retourpage {
+  text-decoration: none;
+  color: black;
+}
+.header .fa-arrow-left {
+  margin-right: 60px;
+}
+
+.fondimage__lapalette {
+  width: 100vw;
+}
+
+/*# sourceMappingURL=lapalette.css.map */

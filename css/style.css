@@ -1,0 +1,237 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0);
+  justify-content: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.288);
+  margin-bottom: 3px;
+}
+.header__maintitle {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 100;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: #dadada;
+}
+.description .fa-map-marker {
+  color: #474747;
+  padding-right: 20px;
+}
+
+.sectionhaut {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sectionhaut__button > p:nth-child(1) {
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 25px;
+}
+.sectionhaut__button > p:nth-child(2) {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.sectionhaut__button--button {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.sectionhaut__button--button > button {
+  padding: 12px;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.288);
+}
+.sectionhaut__button--button > button:hover {
+  background: linear-gradient(#ffa6e6, #9f6fda);
+}
+
+.sectionfiltres__titre {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: -77px;
+}
+
+.filtres {
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 250px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.filtres__filtre, .filtres__filtre, .filtres__filtre {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 300px;
+  padding: 18px;
+  padding-right: 45px;
+  padding-left: 15px;
+  color: black;
+  background: #f3f3f3;
+  border-radius: 17px;
+  border: none;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.288);
+  max-height: 57px;
+  text-overflow: ellipsis;
+  min-width: 100px;
+}
+.filtres__filtre:hover, .filtres__filtre:hover, .filtres__filtre:hover {
+  background: #ded5e9;
+}
+.filtres__filtre--numero, .filtres__filtre--numero, .filtres__filtre--numero {
+  color: white;
+  border: 1px solid transparent;
+  font-size: small;
+  background-color: #9356DC;
+  margin-left: -25px;
+  border-radius: 20px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.filtres__filtre > i, .filtres__filtre > i, .filtres__filtre > i {
+  padding-left: 20px;
+  padding-right: 12px;
+  color: #474747;
+}
+
+.filtres__filtre > p, .filtres__filtre > p, .filtres__filtre > p {
+  font-weight: bolder;
+  max-width: 173px;
+  min-width: 50px;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.restaurants {
+  width: 100%;
+  margin-top: 60px;
+  background-color: #f1f1f1;
+  padding-bottom: 60px;
+}
+.restaurants__cards--titre {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.restaurant__cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+}
+
+.restaurant__container {
+  max-width: 300px;
+  width: 100%;
+  height: 230px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.288);
+  background-color: #FFF;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.restaurant__container--img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+}
+
+.cards--restaurants--texte {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  gap: 5px;
+  padding-left: 10px;
+}
+
+.cards--restaurants--icon {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+  padding-right: 20px;
+}
+.cards--restaurants--icon .fa-heart {
+  font-size: 25px;
+  color: #474747;
+}
+.cards--restaurants--icon .fa-heart:hover {
+  background: -moz-linear-gradient(#ffa6e6, #9f6fda);
+  background: -webkit-linear-gradient(#ffa6e6, #9f6fda);
+  background: linear-gradient(#ffa6e6, #9f6fda);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.liste {
+  background-color: #303030;
+  padding-bottom: 30px;
+}
+.liste .liste__ul {
+  margin-left: 20px;
+  padding-top: 15px;
+  list-style-type: none;
+}
+.liste .liste__ul li {
+  padding: 3px;
+}
+.liste .liste__ul li i {
+  font-size: small;
+  padding-right: 10px;
+}
+.liste .liste__ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
