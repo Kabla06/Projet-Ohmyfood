@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: "Shrikhand", sans-serif;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   height: 100vh;
@@ -12,13 +16,19 @@ body {
 }
 
 .header {
+  z-index: 30;
   display: flex;
   width: 100%;
-  height: fit-content;
-  justify-content: center;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 4px;
+  background-color: #fff;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  position: fixed;
+}
+.header__title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 .header__maintitle {
   font-family: "Shrikhand", sans-serif;
@@ -28,13 +38,41 @@ body {
 .header__retourpage {
   text-decoration: none;
   color: black;
-}
-.header .fa-arrow-left {
-  margin-right: 60px;
+  left: 30px;
+  padding: 7px;
+  position: absolute;
 }
 
+.fondimage {
+  position: fixed;
+  top: 50px;
+  z-index: 10;
+}
 .fondimage__lapalette {
   width: 100vw;
+}
+
+.menu {
+  margin-top: 280px;
+  width: 100%;
+  background: #e7e7e7;
+  z-index: 15;
+  border-radius: 30px 30px 0 0;
+}
+.menu__title {
+  font-size: 23px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0 20px 0;
+}
+.menu__title > h3 {
+  font-weight: 200;
+}
+.menu__title > i {
+  font-size: 25px;
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=restaurants.css.map */
