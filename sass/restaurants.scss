@@ -29,7 +29,7 @@ body {
     display: flex;
     width: 100%;
     align-items: center;
-    background-color: #fff;
+    background-color: $blanc;
     padding-top: 8px;
     padding-bottom: 7px;
     position: fixed;
@@ -48,7 +48,7 @@ body {
 
     &__retourpage {
         text-decoration: none;
-        color: rgb(0, 0, 0);
+        color: $noir;
         left: 30px;
         padding: 7px;
         position: absolute;
@@ -62,24 +62,31 @@ body {
 
     &__lapalette {
         width: 100vw;
+        min-width: 355px;
     }
 }
 
 .menu {
-    margin-top: 280px;
-    width: 100%;
-    background: rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
     z-index: 15;
+    margin-top: 250px;
+    width: 100%;
+    background: $gristresclair;
     border-radius: 30px 30px 0 0;
+    padding: 0  20px 50px 20px;
 
     &__title {
         font-size: 23px;
         display: flex;
         flex-direction: row;
+        width: 100%;
         align-items: center;
-        justify-content: space-evenly;
-        padding: 20px  0 20px 0;
-
+        justify-content: space-between;
+        padding-top: 20px;
+        
         >h3 {
             font-weight: 200;
         }
@@ -87,6 +94,69 @@ body {
         >i {
             font-size: 25px;
             font-weight: 100;
+        }
+    }
+}
+
+.titleplat {
+    width: 100%;
+    max-width: 360px;
+    padding-bottom: 5px;
+    padding-top: 30px;
+    
+    >p {
+        display: flex;
+        align-self: flex-start;
+        max-width: 40px;
+        border-bottom: $tertiaire 3px solid;
+    }
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px 15px 15px;
+    border-radius: 15px;
+    background: $blanc;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 370px;
+
+    &__prix {
+        align-self: flex-end;
+        padding-left: 15px;
+    }
+
+    &__title {
+        margin-bottom: 3px;
+        width: 330px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.liste {
+    background-color: $grisfooter;
+    padding-bottom: 30px;
+
+    .liste__ul {
+        margin-left: 20px;
+        padding-top: 15px;
+        list-style-type: none;
+
+        li {
+            padding: 3px;
+
+            i {
+                font-size: small;
+                padding-right: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
         }
     }
 }

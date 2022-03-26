@@ -20,7 +20,7 @@ body {
   display: flex;
   width: 100%;
   align-items: center;
-  background-color: #fff;
+  background-color: #FFF;
   padding-top: 8px;
   padding-bottom: 7px;
   position: fixed;
@@ -50,22 +50,29 @@ body {
 }
 .fondimage__lapalette {
   width: 100vw;
+  min-width: 355px;
 }
 
 .menu {
-  margin-top: 280px;
-  width: 100%;
-  background: #e7e7e7;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
   z-index: 15;
+  margin-top: 250px;
+  width: 100%;
+  background: #f1f1f1;
   border-radius: 30px 30px 0 0;
+  padding: 0 20px 50px 20px;
 }
 .menu__title {
   font-size: 23px;
   display: flex;
   flex-direction: row;
+  width: 100%;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 20px 0 20px 0;
+  justify-content: space-between;
+  padding-top: 20px;
 }
 .menu__title > h3 {
   font-weight: 200;
@@ -73,6 +80,62 @@ body {
 .menu__title > i {
   font-size: 25px;
   font-weight: 100;
+}
+
+.titleplat {
+  width: 100%;
+  max-width: 360px;
+  padding-bottom: 5px;
+  padding-top: 30px;
+}
+.titleplat > p {
+  display: flex;
+  align-self: flex-start;
+  max-width: 40px;
+  border-bottom: #99E2D0 3px solid;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px 15px 15px;
+  border-radius: 15px;
+  background: #FFF;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 370px;
+}
+.card__prix {
+  align-self: flex-end;
+  padding-left: 15px;
+}
+.card__title {
+  margin-bottom: 3px;
+  width: 330px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.liste {
+  background-color: #303030;
+  padding-bottom: 30px;
+}
+.liste .liste__ul {
+  margin-left: 20px;
+  padding-top: 15px;
+  list-style-type: none;
+}
+.liste .liste__ul li {
+  padding: 3px;
+}
+.liste .liste__ul li i {
+  font-size: small;
+  padding-right: 10px;
+}
+.liste .liste__ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=restaurants.css.map */
