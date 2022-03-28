@@ -76,7 +76,7 @@ body {
         @include button;
        
         &:hover {
-            background: $gradientroseviolet;
+            background: $gradientrosevioletclair;
         }
     }
 }
@@ -197,13 +197,30 @@ body {
     height: 100%;
     align-items: center;
     padding-right: 20px;
+    position: relative;
+    justify-content: flex-end;
 
     .fa-heart {
         font-size: 25px;
+        position: absolute;
+    }
+
+    .fa-regular {
         color: $icogris;
 
         &:hover {
-            @include fahearthover;
+            color: white;
+        }
+    }
+
+    .fa-solid {
+        font-size: 25px;
+        color: transparent;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            color: linear-gradient(#FF79DA, #9356DC); // linear gradient non accepté? //
+            color: $secondaire;
         }
     }
 }

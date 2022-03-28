@@ -72,7 +72,7 @@ body {
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.288);
 }
 .sectionhaut__button--button > button:hover {
-  background: linear-gradient(#ffa6e6, #9f6fda);
+  background: linear-gradient(#ff8ade, #9f6fda);
 }
 
 .sectionfiltres__titre {
@@ -198,19 +198,27 @@ body {
   height: 100%;
   align-items: center;
   padding-right: 20px;
+  position: relative;
+  justify-content: flex-end;
 }
 .cards--restaurants--icon .fa-heart {
   font-size: 25px;
+  position: absolute;
+}
+.cards--restaurants--icon .fa-regular {
   color: #474747;
 }
-.cards--restaurants--icon .fa-heart:hover {
-  background: -moz-linear-gradient(#ffa6e6, #9f6fda);
-  background: -webkit-linear-gradient(#ffa6e6, #9f6fda);
-  background: linear-gradient(#ffa6e6, #9f6fda);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.cards--restaurants--icon .fa-regular:hover {
+  color: white;
+}
+.cards--restaurants--icon .fa-solid {
+  font-size: 25px;
+  color: transparent;
+  transition: all 0.3s ease-in;
+}
+.cards--restaurants--icon .fa-solid:hover {
+  color: linear-gradient(#FF79DA, #9356DC);
+  color: #FF79DA;
 }
 
 .liste {
