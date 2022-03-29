@@ -11,18 +11,37 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
+    // height: 100vh;
     display: flex;
     flex-flow: column nowrap;
 }
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 30;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 .header {
     display: flex;
     width: 100%;
     border: 1px solid $blacktransparent;
     justify-content: center;
-    // @extend %padding1;
-    // @extend %shadow1;
     @include padding1;
     @include shadow1;
     margin-bottom: 3px;
@@ -83,11 +102,12 @@ body {
 
 .sectionfiltres {
     &__titre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
+        padding-top: 30px;
         text-align: center;
-        margin-top: 30px;
-        margin-left: -77px;
-        // transform: translate(40% 0 0 50%);
     }
 }
 

@@ -82,7 +82,8 @@ body {
         font-size: 23px;
         display: flex;
         flex-direction: row;
-        width: 100%;
+        min-width: 35%;
+        max-width: 50%;
         align-items: center;
         justify-content: space-between;
         padding-top: 20px;
@@ -114,13 +115,16 @@ body {
 
 .card {
     display: flex;
+    position: relative;
     justify-content: space-between;
-    padding: 15px 25px 15px 15px;
+    padding: 10px 25px 10px 15px;
     border-radius: 15px;
     background: $blanc;
     margin-top: 15px;
     width: 100%;
     max-width: 370px;
+    height: 68px;
+    
 
     &__prix {
         align-self: flex-end;
@@ -128,12 +132,104 @@ body {
     }
 
     &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         margin-bottom: 3px;
         width: 330px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+
+    // @keyframes top-to-bottom {
+    //     from {background-color: white;}
+    //     to {background-color: red;}
+    // }
+}
+
+.animation1>.card{
+    animation-name: top-to-bottom;
+    animation-duration: 1s;
+    animation-direction: normal;
+}
+
+.animation1 {
+    .card {
+        @keyframes top-to-bottom {
+            0%   {background: rgba(255, 255, 255, 0); top: 13px;}
+            25%   {background: rgba(255, 255, 255, 0.226); top: 10px;}
+            50%   {background: rgba(255, 255, 255, 0.411); top: 7px;}
+            75%   {background: rgba(255, 255, 255, 0.521); top: 4px;}
+            100% {background: rgb(238, 238, 238);top: 0px;}
+        }
+    }
+}
+
+.animation2>.card{
+    animation-name: top-to-bottom;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-direction: normal;
+}
+
+.animation2 {
+    .card {
+        @keyframes top-to-bottom {
+            0%   {background: rgba(255, 255, 255, 0); top: 13px;}
+            25%   {background: rgba(255, 255, 255, 0.226); top: 10px;}
+            50%   {background: rgba(255, 255, 255, 0.411); top: 7px;}
+            75%   {background: rgba(255, 255, 255, 0.521); top: 4px;}
+            100% {background: rgb(238, 238, 238);top: 0px;}
+        }
+    }
+}
+
+.animation3>.card{
+    animation-name: top-to-bottom;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-direction: normal;
+}
+
+.animation3 {
+    .card {
+        @keyframes top-to-bottom {
+            0%   {background: rgba(255, 255, 255, 0); top: 13px;}
+            25%   {background: rgba(255, 255, 255, 0.226); top: 10px;}
+            50%   {background: rgba(255, 255, 255, 0.411); top: 7px;}
+            75%   {background: rgba(255, 255, 255, 0.521); top: 4px;}
+            100% {background: rgb(238, 238, 238);top: 0px;}
+        }
+    }
+}
+
+.animation1 {
+    .card:nth-child(n+1) {
+        &:hover {
+            color: blue;
+        }
+    }
+}
+
+.animation2 {
+    .card:nth-child(n+1) {
+        &:hover {
+            color: blue;
+        }
+    }
+}
+
+.animation3 {
+    .card:nth-child(n+1) {
+        &:hover {
+            color: blue;
+        }
+    }
+}
+
+footer {
+    z-index: 15;
 }
 
 .liste {
@@ -167,6 +263,7 @@ body {
     justify-content: center;
     background-color: $gristresclair;
     padding-bottom: 50px;
+    z-index: 15;
 
     &__button {
         padding: 12px;
