@@ -117,7 +117,6 @@ body {
     display: flex;
     position: relative;
     justify-content: space-between;
-    padding: 10px 25px 10px 15px;
     border-radius: 15px;
     background: $blanc;
     margin-top: 15px;
@@ -129,39 +128,38 @@ body {
     &__prix {
         align-self: flex-end;
         padding-left: 15px;
+        margin-right: 20px;
+        margin-bottom: 8px;
     }
 
     &__title {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-bottom: 3px;
+        margin-bottom: 7px;
+        margin-top: 7px;
+        margin-left: 15px;
         width: 330px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
-
-    // @keyframes top-to-bottom {
-    //     from {background-color: white;}
-    //     to {background-color: red;}
-    // }
 }
 
 .animation1>.card{
     animation-name: top-to-bottom;
     animation-duration: 1s;
-    animation-direction: normal;
+    animation-direction: reverse;
 }
 
 .animation1 {
     .card {
         @keyframes top-to-bottom {
-            0%   {background: rgba(255, 255, 255, 0); top: 13px;}
-            25%   {background: rgba(255, 255, 255, 0.226); top: 10px;}
-            50%   {background: rgba(255, 255, 255, 0.411); top: 7px;}
-            75%   {background: rgba(255, 255, 255, 0.521); top: 4px;}
-            100% {background: rgb(238, 238, 238);top: 0px;}
+            0%   {background-color: rgba(255, 255, 255, 0); left: 50px;}
+            25%   {background-color: rgba(255, 255, 255, 0.226); top: 10px;}
+            50%   {background-color: rgba(255, 255, 255, 0.411); top: 7px;}
+            75%   {background-color: rgba(255, 255, 255, 0.521); top: 4px;}
+            100% {background-color: rgb(238, 238, 238); top: 0px;}
         }
     }
 }
@@ -170,7 +168,7 @@ body {
     animation-name: top-to-bottom;
     animation-duration: 1s;
     animation-delay: 1s;
-    animation-direction: normal;
+    animation-direction: reverse;
 }
 
 .animation2 {
@@ -189,7 +187,7 @@ body {
     animation-name: top-to-bottom;
     animation-duration: 1s;
     animation-delay: 2s;
-    animation-direction: normal;
+    animation-direction: reverse;
 }
 
 .animation3 {
@@ -204,26 +202,35 @@ body {
     }
 }
 
-.animation1 {
-    .card:nth-child(n+1) {
-        &:hover {
-            color: blue;
-        }
-    }
+.hover--vert>i {
+    font-size: 0px;
+    animation-name: rotatif;
+    animation-duration: 1s;
+    animation-direction: normal;
 }
 
-.animation2 {
-    .card:nth-child(n+1) {
-        &:hover {
-            color: blue;
-        }
-    }
-}
+.card:hover {
 
-.animation3 {
-    .card:nth-child(n+1) {
-        &:hover {
-            color: blue;
+    .hover--vert {
+        width: 110px;
+        background: $tertiaire;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 15px 15px 0;
+    }
+    .fa-circle-check {
+        font-size: 21px;
+        color: $blanc;
+        animation: rotating 1s linear reverse;
+
+        @keyframes rotating {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(180deg);
+            }
         }
     }
 }

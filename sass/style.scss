@@ -16,6 +16,21 @@ body {
     flex-flow: column nowrap;
 }
 
+.box {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(204, 204, 204, 0.541);
+    animation: fondclair 3s linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes fondclair {
+    from {visibility: visible;}
+    to {visibility: hidden;}
+}
+
 .loader {
     position: fixed;
     top: 0;
@@ -29,13 +44,15 @@ body {
     border-top: 10px solid #3498db;
     width: 120px;
     height: 120px;
-    animation: spin 1.5s linear infinite;
+    animation: spin 1s linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg); visibility: hidden;}
+}
 
 .header {
     display: flex;
