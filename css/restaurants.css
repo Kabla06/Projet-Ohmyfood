@@ -77,7 +77,7 @@ body {
 .menu__title > h3 {
   font-weight: 200;
 }
-.menu__title > i {
+.menu__title > .fa-regular {
   font-size: 25px;
   font-weight: 100;
 }
