@@ -81,14 +81,27 @@ body {
         align-items: center;
         justify-content: space-between;
         padding-top: 20px;
+
+        .fa-solid {
+            color: transparent;
+            font-weight: 800;
+            transition: all 0.3s ease-in;
+
+            &:hover {
+                background: -webkit-linear-gradient(bottom, $secondaire, $primaire);
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
+        }
+
+        >.fa-heart {
+            font-size: 25px;
+            position: absolute;
+            left: 70%;
+        }
         
         >h3 {
             font-weight: 200;
-        }
-
-        >.fa-regular {
-            font-size: 25px;
-            font-weight: 100;
         }
     }
 }
@@ -297,7 +310,12 @@ footer {
 
     .menu {
         &__title {
-            width: 300px;
+        width: 300px;
+
+        >.fa-heart {
+            position: absolute;
+            left: 85%;
+        }
         }
     }
 }
@@ -320,7 +338,7 @@ footer {
     .menu {
         &__title {
             text-align: center;
-            .fa-regular {
+            .fa-heart {
                 display: none;
             }
         }

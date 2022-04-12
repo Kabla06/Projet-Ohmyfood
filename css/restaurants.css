@@ -74,12 +74,23 @@ body {
   justify-content: space-between;
   padding-top: 20px;
 }
+.menu__title .fa-solid {
+  color: transparent;
+  font-weight: 800;
+  transition: all 0.3s ease-in;
+}
+.menu__title .fa-solid:hover {
+  background: -webkit-linear-gradient(bottom, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.menu__title > .fa-heart {
+  font-size: 25px;
+  position: absolute;
+  left: 70%;
+}
 .menu__title > h3 {
   font-weight: 200;
-}
-.menu__title > .fa-regular {
-  font-size: 25px;
-  font-weight: 100;
 }
 
 .titleplat {
@@ -274,6 +285,10 @@ footer {
   .menu__title {
     width: 300px;
   }
+  .menu__title > .fa-heart {
+    position: absolute;
+    left: 85%;
+  }
 }
 @media screen and (max-width: 330px) {
   .card {
@@ -288,7 +303,7 @@ footer {
   .menu__title {
     text-align: center;
   }
-  .menu__title .fa-regular {
+  .menu__title .fa-heart {
     display: none;
   }
 }
