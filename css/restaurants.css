@@ -10,20 +10,16 @@ h1, h2, h3, h4, h5 {
 
 body {
   font-family: "Roboto", sans-serif;
-  height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
+  background: #f1f1f1;
 }
 
 .header {
-  z-index: 30;
   display: flex;
   width: 100%;
   align-items: center;
   background-color: #FFF;
   padding-top: 8px;
   padding-bottom: 7px;
-  position: fixed;
 }
 .header__title {
   display: flex;
@@ -44,13 +40,19 @@ body {
 }
 
 .fondimage {
-  position: fixed;
-  top: 50px;
-  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  overflow: hidden;
 }
 .fondimage__lapalette {
-  width: 100vw;
-  min-width: 355px;
+  width: 100%;
+  min-width: 300px;
+}
+
+.section__margintop {
+  margin-top: -30px;
 }
 
 .menu {
@@ -58,8 +60,6 @@ body {
   flex-direction: column;
   position: relative;
   align-items: center;
-  z-index: 15;
-  margin-top: 250px;
   width: 100%;
   background: #f1f1f1;
   border-radius: 30px 30px 0 0;
@@ -77,12 +77,15 @@ body {
 .menu__title .fa-solid {
   color: transparent;
   font-weight: 800;
-  transition: all 0.3s ease-in;
+  opacity: 0;
 }
 .menu__title .fa-solid:hover {
   background: -webkit-linear-gradient(bottom, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
+  animation: fonducouleur 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 .menu__title > .fa-heart {
   font-size: 25px;
@@ -93,6 +96,14 @@ body {
   font-weight: 200;
 }
 
+@keyframes fonducouleur {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .titleplat {
   width: 100%;
   max-width: 360px;
@@ -221,10 +232,6 @@ body {
   }
 }
 
-footer {
-  z-index: 15;
-}
-
 .liste {
   background-color: #303030;
   padding-bottom: 30px;
@@ -260,7 +267,6 @@ footer {
   justify-content: center;
   background-color: #f1f1f1;
   padding-bottom: 50px;
-  z-index: 15;
 }
 .divbutton__button {
   padding: 12px;
@@ -296,7 +302,7 @@ footer {
   }
 
   .menu__title {
-    width: 250px;
+    width: 200px;
   }
 }
 @media screen and (max-width: 270px) {
@@ -312,10 +318,8 @@ footer {
     display: flex;
     flex-direction: row;
     position: relative;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
-    z-index: 15;
-    margin-top: 250px;
     width: 100%;
     background: #f1f1f1;
     border-radius: 30px 30px 0 0;
@@ -338,6 +342,10 @@ footer {
   .menu__title > i {
     font-size: 25px;
     font-weight: 100;
+  }
+
+  .section__margintop {
+    height: 800px;
   }
 
   .animation1, .animation2, .animation3 {
