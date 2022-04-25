@@ -81,6 +81,40 @@ body {
     }
 }
 
+.inputaccueil {
+    border: none;
+    background-color: $grisclair;
+    height: 25px;
+    text-align: center;
+    width: 190px;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 17px;
+    font-weight: 500;
+    
+
+    &::placeholder {
+        color: $noir;
+        opacity: 1;
+        font-size: large;
+        font-weight: 500;
+        padding-right: 20px;
+        
+    }
+}
+
+input:focus::placeholder {
+    color: transparent;
+    padding-right: 20px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 15px;
+}
+
 .sectionhaut {
     background-color: $gristresclair;
     display: flex;
@@ -187,8 +221,10 @@ body {
     padding-bottom: 60px;
 
     &__cards--titre {
+        display: flex;
+        justify-content: center;
         padding-top: 30px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
 }
 
@@ -305,3 +341,47 @@ body {
 // ____________________________________________________ //
 
 // menu La Palette du Goût //
+
+@media screen and (min-width: 1155px) {
+    .restaurant__cards {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        gap: 13px;
+    }
+
+    .restaurants {
+        margin-top: 60px;
+        background-color: $gristresclair;
+        padding-bottom: 60px;
+        height: 550px;
+    
+        &__cards--titre {
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 440px){
+    .inputaccueil {
+        width: 190px;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .inputaccueil {
+        width: 170px;
+    }
+}
+
+@media screen and (max-width: 270px){
+    .inputaccueil {
+        width: 100px;
+    }
+}
