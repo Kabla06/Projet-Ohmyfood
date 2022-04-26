@@ -18,6 +18,7 @@ body {
   animation: fondclair 3s linear;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
+  z-index: 1;
 }
 
 @keyframes fondclair {
@@ -254,11 +255,26 @@ input::-webkit-input-placeholder {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
 }
 .restaurant__container--img {
   max-width: 100%;
   max-height: 160px;
   object-fit: cover;
+}
+.restaurant__container--nouveau {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00a558;
+  font-weight: 600;
+  font-size: 15px;
+  width: 70px;
+  height: 28px;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 12px;
+  right: 14px;
 }
 
 .cards--restaurants--texte {
